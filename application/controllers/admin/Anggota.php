@@ -23,7 +23,9 @@ class Anggota extends CI_Controller
     }
 
     public function tambah(){
-        $this->anggota_model->input();     
+        $this->anggota_model->input();
+        $this->session->set_flashdata('message', 'Data berhasil di tambahkan');    
+        //$this->load->view("admin/alert/berhasil_simpan");
         redirect ('admin/anggota');
     }
 
@@ -41,12 +43,14 @@ class Anggota extends CI_Controller
         $anggota->update($kd_anggota);
   
         $data["anggota"] = $anggota->getById($kd_anggota);
-        
+        //$this->session->set_flashdata('message', 'Data berhasil diubah');    
         $this->load->view("admin/anggota/edit_form", $data);
+        
     }
 
     public function delete($kd_anggota){
         $this->anggota_model->delete($kd_anggota);
+        $this->session->set_flashdata('message', 'Data berhasil dihapus');    
         redirect('admin/anggota');
     }
 }

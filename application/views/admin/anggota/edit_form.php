@@ -17,24 +17,17 @@
 			<div class="container-fluid">
 
 				<?php $this->load->view("admin/_partials/breadcrumb.php") ?>
-
-				<?php if ($this->session->flashdata('success')): ?>
-				<div class="alert alert-success" role="alert">
-					<?php echo $this->session->flashdata('success'); ?>
-				</div>
-				<?php endif; ?>
-
 				<!-- Card  -->
 				<div class="card mb-3">
 					<div class="card-header">
 
-						<a href="<?php echo site_url('admin/peminjaman/') ?>"><i class="fas fa-arrow-left"></i>
+						<a href="<?php echo site_url('admin/anggota/') ?>"><i class="fas fa-arrow-left"></i>
 							Back</a>
 					</div>
 					<div class="card-body">
 
 						
-						<form action="<?php base_url('admin/peminjaman/edit') ?>" method="post" enctype="multipart/form-data">
+						<form action="<?php base_url('admin/anggota/edit') ?>" method="post" enctype="multipart/form-data">
 
 							<input type="hidden" name="kd_anggota" value="<?php echo $anggota->kd_anggota?>" />
 
@@ -56,7 +49,7 @@
 							</div>
 
 							<input class="btn btn-success" type="submit" name="btn" value="Edit" />
-						</form-->
+						</form>
 
 					</div>
 

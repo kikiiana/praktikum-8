@@ -10,30 +10,11 @@ class Login extends CI_Controller
 
     public function index()
     {
-        //$data["anggota"] = $this->anggota_model->getAll();
         $this->load->view("admin/login");
     }
-    function aksi_login(){
-    $username = $this->input->post('username');
-    $password = $this->input->post('password');
-    $where = array(
-        'username' => $username,
-        'password' => md5($password)
-        );
 
-    $cek = $this->Login_model->cek_login("petugas",$where)->num_rows();
-    if($cek > 0){
- 
-        $data_session = array(
-            'nama' => $username,
-            'status' => "login"
-            );
- 
-        $this->session->set_userdata($data_session);
- 
-        redirect(base_url("admin/admin"));
-    }else{
-        echo "Username dan password salah !";
+    public function aksi_login(){
+        $this->Login_model->input();     
+        redirect ('admin/buku');
     }
-}
 }

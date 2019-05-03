@@ -23,7 +23,8 @@ class Peminjaman extends CI_Controller
     }
 
     public function tambah(){
-        $this->peminjaman_model->input();     
+        $this->peminjaman_model->input();   
+         $this->session->set_flashdata('message', 'Data Peminjaman berhasil di tambahkan');  
         redirect ('admin/peminjaman');
     }
 
@@ -47,6 +48,7 @@ class Peminjaman extends CI_Controller
 
     public function delete($kd_pinjam){
         $this->peminjaman_model->delete($kd_pinjam);
+         $this->session->set_flashdata('message', 'Data peminjaman berhasil dihapus');
         redirect('admin/peminjaman');
     }
 }

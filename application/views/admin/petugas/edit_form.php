@@ -28,15 +28,15 @@
 				<div class="card mb-3">
 					<div class="card-header">
 
-						<a href="<?php echo site_url('admin/peminjaman/') ?>"><i class="fas fa-arrow-left"></i>
+						<a href="<?php echo site_url('admin/petugas/') ?>"><i class="fas fa-arrow-left"></i>
 							Back</a>
 					</div>
 					<div class="card-body">
 
 						
-						<form action="<?php base_url('admin/peminjaman/edit') ?>" method="post" enctype="multipart/form-data">
+						<form action="<?php base_url('admin/petugas/edit') ?>" method="post" enctype="multipart/form-data">
 
-							<input type="hidden" name="kd_pinjam" value="<?php echo $peminjaman->kd_pinjam?>" />
+							<input type="hidden" name="kd_pinjam" value="<?php echo $petugas->kd_petugas ?>" />
 
 							<div class="form-group">
 								<label for="nama">Nama</label>

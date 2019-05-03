@@ -17,6 +17,11 @@
 			<div class="container-fluid">
 
 				<?php $this->load->view("admin/_partials/breadcrumb.php") ?>
+					<?php if ($this->session->flashdata('message')): ?>
+					<div class="alert alert-success" role="alert">
+						<?php echo $this->session->flashdata('message');?>
+					</div>
+					<?php endif; ?>
 
 				<!-- DataTables -->
 				<div class="card mb-3">

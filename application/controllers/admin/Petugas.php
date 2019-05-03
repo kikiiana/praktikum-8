@@ -24,6 +24,7 @@ class Petugas extends CI_Controller
 
     public function tambah(){
         $this->petugas_model->input();     
+         $this->session->set_flashdata('message', 'Data Petugas berhasil di tambahkan');
         redirect ('admin/petugas');
     }
 
@@ -47,6 +48,7 @@ class Petugas extends CI_Controller
 
     public function delete($kd_petugas){
         $this->petugas_model->delete($kd_petugas);
+         $this->session->set_flashdata('message', 'Data petugas berhasil diubah');
         redirect('admin/petugas');
     }
 }

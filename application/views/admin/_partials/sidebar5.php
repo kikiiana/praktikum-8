@@ -12,7 +12,7 @@
             <span>Data Peminjaman</span></a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="anggota">
+          <a class="nav-link" href="admin/anggota">
             <i class="fas fa-fw fa-table"></i>
             <span>Data Anggota</span>
           </a>

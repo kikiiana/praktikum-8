@@ -32,7 +32,7 @@
    			$this->db->insert('anggota', $data);
     	}
     
-   	public function update($kd_anggota)
+   		public function update($kd_anggota)
 	    {
 	        $nama = $this->input->post('nama');
    			$prodi = $this->input->post('prodi');

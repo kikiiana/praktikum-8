@@ -26,7 +26,9 @@
    		public function input(){
    			$nama = $this->input->post('nama');
    			$alamat = $this->input->post('alamat');
-   			$data  = array('nama' => $nama, 'alamat' => $alamat);
+   			$username = $this->input->post('username');
+   			$password = $this->input->post('password');
+   			$data  = array('nama' => $nama, 'alamat' => $alamat, 'username' => $username, 'password' =>$password);
    			
    			$this->db->insert('petugas', $data);
     	}

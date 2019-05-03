@@ -17,6 +17,11 @@
 			<div class="container-fluid">
 
 				<?php $this->load->view("admin/_partials/breadcrumb.php") ?>
+				<?php if ($this->session->flashdata('message')): ?>
+				<div class="alert alert-success" role="alert">
+					<?php echo $this->session->flashdata('message');?>
+				</div>
+				<?php endif; ?>
 
 				<!-- DataTables -->
 				<div class="card mb-3">
@@ -60,7 +65,7 @@
 											?>
 										</td>
 										<td width="250">
-											<a href="<?php echo site_url('admin/anggota/edit/'.$anggota->kd_anggota) ?>"
+											<a href="<?php echo site_url('admin/anggota/edit/'.$anggota->kd_anggota )?>"
 											 class="btn btn-small"><i class="fas fa-edit"></i> Edit</a>
 											<a 
 											 href="<?php echo site_url('admin/anggota/delete/').$anggota->kd_anggota?>" class="btn btn-small text-danger"><i class="fas fa-trash"></i> Hapus</a>

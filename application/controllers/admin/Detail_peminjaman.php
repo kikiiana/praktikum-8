@@ -25,6 +25,7 @@ class Detail_peminjaman extends CI_Controller
     public function tambah(){
         $this->detail_peminjaman_model->input();     
         redirect ('admin/detail_peminjaman');
+         $this->session->set_flashdata('message', 'Detail Peminjaman berhasil di tambahkan');
     }
 
     public function insert(){
@@ -47,6 +48,7 @@ class Detail_peminjaman extends CI_Controller
 
     public function delete($kd_register){
         $this->detail_peminjaman_model->delete($kd_register);
+         $this->session->set_flashdata('message', 'Data berhasil dihapus');
         redirect('admin/detail_peminjaman');
     }
 }

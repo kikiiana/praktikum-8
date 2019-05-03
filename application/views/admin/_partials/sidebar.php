@@ -26,4 +26,9 @@
             <i class="fas fa-fw fa-table"></i>
             <span>Detail Peminjaman</span></a>
         </li>
+        <li class="nav-item">
+          <a class="nav-link" href="<?php site_url('admin/authentication/logout')?>">
+            <i class="fas fa-fw fa-table"></i>
+            <span>Logout</span></a>
+        </li>
       </ul>

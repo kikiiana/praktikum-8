@@ -26,6 +26,7 @@ class Buku extends CI_Controller
 
     public function tambah(){
         $this->buku_model->input();     
+         $this->session->set_flashdata('message', 'Data Buku berhasil ditambahkan');
         redirect ('admin/buku');
     }
 
@@ -52,6 +53,7 @@ class Buku extends CI_Controller
 
     public function delete($kd_registrasi){
         $this->buku_model->delete($kd_registrasi);
+         $this->session->set_flashdata('message', 'Data buku berhasil dihapus');
         redirect('admin/buku');
     }
    
